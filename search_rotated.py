@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+import unittest
+t = unittest.TestCase()
 def binary_search_rotated(arr, key):
       
   def binary_search(arr, low, high, key):
@@ -40,10 +43,10 @@ def binary_search_rotated(arr, key):
     return mid
 
 l = [176,188,199,200,210,222,1,10,20,47,59,63,75,88,99,107,120,133,155,162]
-print(binary_search_rotated(l , 210))
+t.assertEqual(binary_search_rotated(l , 210), 4)
 
 l = [7, 8, 1, 2, 4, 5, 6] 
-print(binary_search_rotated(l , 8))
+t.assertEqual(binary_search_rotated(l , 8),1)
 
 l = [4, 5, 6, 1, 2, 3]
-print(binary_search_rotated(l , 6))
+t.assertEqual(binary_search_rotated(l , 6),2)
