@@ -5,10 +5,11 @@ t = unittest.TestCase()
 def binary_search_rotated(arr, key):
 
   def binary_search(arr, low, high, key):
+ #   print(low, high, key, end=" ")
     if low > high or (low == high and arr[low] != key):
       return -1
     mid = (low + high) // 2
-#    print(low, high, key, mid)
+#    print(mid)
     if arr[mid] == key:
       return mid
     elif arr[mid] < arr[high]: # if RHS is sorted
